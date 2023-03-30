@@ -530,7 +530,7 @@ class WebClient:
         
         # send the request to the server and store the result:
         response, content = self.http.request(
-            location.decode('utf-8'), self.method, body=body, headers=headers )
+            location.decode('utf-8'), self.method, body=body, headers=headers, verify=False )
         self.response = response
         self.content = content
 
